@@ -24,3 +24,6 @@ jobs:
         run: |
           echo "I will never execute"
       - name: Step 5 - Execute on Workflow Failure
+        if: ${{ failure() }} # Only run this step if the workflow failed
+        run: |
+          echo "Workflow failed"
