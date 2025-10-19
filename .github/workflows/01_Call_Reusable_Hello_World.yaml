@@ -1,0 +1,6 @@
+name: "01 Hello World"
+on:
+  workflow_dispatch: # This event triggers the workflow manually
+jobs:
+  say_hello_job:
+    uses: ./.github/workflows/01_Reusable_Hello_World.yaml
