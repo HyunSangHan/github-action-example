@@ -3,7 +3,7 @@ on:
   workflow_dispatch: # This event triggers the workflow manually
     inputs:
       nickname:
-        description: "Name"
+        description: "Nickname"
         default: "Hyunsang"
         required: true
         type: string
