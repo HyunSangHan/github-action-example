@@ -1,6 +1,14 @@
 name: "01 Call Reusable Hello World"
 on:
   workflow_dispatch: # This event triggers the workflow manually
+    inputs:
+      nickname:
+        description: "Name"
+        default: "Hyunsang"
+        required: true
+        type: string
 jobs:
   say_call_reusable_hello_world_job:
     uses: ./.github/workflows/01_Reusable_Hello_World.yaml
+    with:
+      name: ${{ inputs.nickname }}

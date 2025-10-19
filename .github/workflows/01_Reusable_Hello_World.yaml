@@ -1,9 +1,14 @@
 name: "01 Reusable Hello World"
 on:
   workflow_call:
+    inputs:
+      name:
+        description: "Name"
+        required: true
+        type: string
 jobs:
   say_reusable_hello_world_job:
     runs-on: ubuntu-latest # The runner environment (Ubuntu in this case)
     steps:
       - name: Echo Reusable Hello World
-        run: echo "Hello, World!"
+        run: echo "Hello, ${{ inputs.name }}'s World!"
